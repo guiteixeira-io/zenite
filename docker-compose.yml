@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  wordpress:
+  zenite:
     image: wordpress:latest
     container_name: zenite-wordpress
     restart: always
@@ -13,9 +13,9 @@ services:
     networks:
       - sigma-net
     depends_on:
-      - db
+      - zenite-db
 
-  db:
+  zenite-db:
     image: mariadb:10.6
     container_name: zenite-db
     restart: always
