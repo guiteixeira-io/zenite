@@ -1,7 +1,8 @@
 
 services:
   zenite:
-    image: wordpress:latest
+    image: zenite-wordpress
+    build: .
     container_name: zenite-wordpress
     restart: always
     ports:
